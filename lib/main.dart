@@ -27,18 +27,27 @@ class ListaFilmes extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        leading: Icon(Icons.adb_outlined, color: Colors.white,),
+        leading: Icon(
+          Icons.adb_outlined,
+          color: Colors.white,
+        ),
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 12.0),
-            child: Icon(Icons.search, color: Colors.white,),
+            child: Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
           )
         ],
-        title: const Text(
-          "IndexCine",
-          style: TextStyle(color: Colors.white),
-        ),
-        backgroundColor: Color.fromARGB(255, 74, 7, 150),
+        title: const Text("IndexCine",
+            style: TextStyle(
+              color: Colors.white,
+              fontFamily: "Buran USSR" 
+            ),
+            ),
+        centerTitle: true,
+        backgroundColor: Color.fromARGB(164, 74, 7, 150),
         toolbarHeight: 90,
       ),
       body: Padding(

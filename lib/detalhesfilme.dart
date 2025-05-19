@@ -5,8 +5,9 @@ import "package:url_launcher/url_launcher.dart";
 class DetalhesFilme extends StatelessWidget {
   final Filme filme;
 
-  const DetalhesFilme({required this.filme});
+  Icon icone = Icon(Icons.star_outlined);
 
+  DetalhesFilme({required this.filme});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,22 +45,31 @@ class DetalhesFilme extends StatelessWidget {
               Text(filme.sinopse, style: texto()),
               SizedBox(height: 12),
               Text('Direção/Produção', style: titulo()),
-              Text(filme.direcao, style: texto(),),
+              Text(
+                filme.direcao,
+                style: texto(),
+              ),
               SizedBox(height: 12),
               Text('Empresa/Estúdio', style: titulo()),
-              Text(filme.empresa, style:texto()),
+              Text(filme.empresa, style: texto()),
               SizedBox(height: 12),
               Text('Gênero', style: titulo()),
               Text(filme.genero, style: texto()),
               SizedBox(height: 12),
               Text('Data de Lançamento', style: titulo()),
-              Text(filme.dataLancamento, style:texto()),
+              Text(filme.dataLancamento, style: texto()),
               SizedBox(height: 12),
               Text('Elenco', style: titulo()),
-              Text(filme.elenco, style: texto(),),
+              Text(
+                filme.elenco,
+                style: texto(),
+              ),
               SizedBox(height: 12),
               Text('Avaliação', style: titulo()),
-              Text('${Icon(Icons.star_outlined, color: Color.fromARGB(255, 255, 251, 0),)} ${filme.avaliacao}', style: texto(),),
+              Text(
+                '${filme.avaliacao}',
+                style: texto(),
+              ),
               SizedBox(height: 12),
               Text('Galeria de Imagens', style: titulo()),
               SizedBox(height: 8),
@@ -74,13 +84,15 @@ class DetalhesFilme extends StatelessWidget {
                   }).toList(),
                 ),
               ),
-               SizedBox(height: 10),
+              SizedBox(height: 10),
               ElevatedButton(
                   onPressed: () {
                     final Url = Uri.parse(filme.trailer);
                     launchUrl(Url, mode: LaunchMode.externalApplication);
                   },
-                  child: Text("Trailer do filme",))
+                  child: Text(
+                    "Trailer do filme",
+                  ))
             ],
           ),
         ),
@@ -88,6 +100,7 @@ class DetalhesFilme extends StatelessWidget {
     );
   }
 
-  TextStyle titulo() => TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white);
-  TextStyle texto() => TextStyle(color:Colors.white, fontSize: 14);
+  TextStyle titulo() =>
+      TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white);
+  TextStyle texto() => TextStyle(color: Colors.white, fontSize: 14);
 }
