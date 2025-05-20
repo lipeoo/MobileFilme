@@ -11,12 +11,35 @@
 >- Guilherme Henrique Lemes Souza
 
 # Imagens prototipo
+
+### Tela inicial
+
 ![Group 10 (1)](https://github.com/user-attachments/assets/183e280e-f367-421f-a20f-292955e04ad4)
+
+### Tela de informação do Filme
 
 ![Group 11](https://github.com/user-attachments/assets/b2246d89-b52c-4d11-b21a-7266fb9e2fc1)
 
-# Descrição detalhada da aplicação 
+ ### Mapa de navegação
 
+![MapaNavegacao](https://github.com/user-attachments/assets/2fb2d631-ac06-4316-b7bf-145f247ea254)
+
+
+  #### Tela inicial ->  Tela de informação do Filme
+  #### Tela de informação do filme -> Tela inicial
+  
+# Descrição detalhada da aplicação 
+Apresenta os filmes inspirações por meio de uma lista criada a mão, a tela inicial é composta por diversos Cards cada um com os filmes expecificados.
+Quando clicado é mandando para outra tela com toda a informação do filme selecionado apresentando:<br>
+sinopse; <br>
+direção/produção; <br>
+empresa/studio; <br>
+gênero; <br>
+dados de lançamento; <br>
+elenco;<br>
+galeria de imagens; <br>
+link para o trailer;<br>
+link para site oficial/redes sociais.
 
 # Widgets utilizados 
 ### Tela Inicial
