@@ -7,10 +7,24 @@
 
 >[!Important]
  > ` - Dupla:`
->- Guilherme Henrique Lemes Souza
 >- Felipe Mussato Rodrigues
+>- Guilherme Henrique Lemes Souza
 
-## Descrição detalhada da aplicação 
+
+# Descrição detalhada da aplicação 
 
 
-## Widgets utilizados 
+# Widgets utilizados 
+### Tela Inicial
+- Text:
+- Card:
+- AppBar:
+- Column:
+- Image:
+- GridView:
+- Expanded:
+- Padding:
+- Icon: 
+### Tela do filme 
+
+
