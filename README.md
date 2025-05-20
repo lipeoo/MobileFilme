@@ -10,6 +10,10 @@
 >- Felipe Mussato Rodrigues
 >- Guilherme Henrique Lemes Souza
 
+# Imagens prototipo
+![Group 10 (1)](https://github.com/user-attachments/assets/183e280e-f367-421f-a20f-292955e04ad4)
+
+![Group 11](https://github.com/user-attachments/assets/b2246d89-b52c-4d11-b21a-7266fb9e2fc1)
 
 # Descrição detalhada da aplicação 
 
@@ -30,7 +34,6 @@
 ### Tela do filme 
 - Center: Deixa os elemntos da tela centralizados
 - SizedBox: Utilizado para criar um espaço em branco
-- SingleChildScrollView: 
 - Row: cria uma linha para melhor ajuste 
 - ElevatedButton: Cria um Botão
 
