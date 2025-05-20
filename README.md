@@ -16,15 +16,22 @@
 
 # Widgets utilizados 
 ### Tela Inicial
-- Text:
-- Card:
-- AppBar:
-- Column:
-- Image:
-- GridView:
-- Expanded:
-- Padding:
-- Icon: 
+- AppBar: Barra superior do aplicativo
+- Icon: utilizado na AppBar mostra o icone de Lupa 
+- TextField: Utilizada na AppBar, para ser um campo de pesquisa  
+- Text: Cria um campo onde mostra textos
+- GridView: Utilizado para organizar os campos onde aparecerão os filmes
+- Card: Utilizado para criar os cards onde mostra os filmes 
+- Column: Cria uma coluna onde alinha as informações do filme
+- Image: Mostra a imagem do filme expecifico
+- Expanded: Ele se ajusta de acordo com o tamnho disponivel 
+- Padding: Ajusta o espaçamento da tela 
+
 ### Tela do filme 
+- Center: Deixa os elemntos da tela centralizados
+- SizedBox: Utilizado para criar um espaço em branco
+- SingleChildScrollView: 
+- Row: cria uma linha para melhor ajuste 
+- ElevatedButton: Cria um Botão
 
 
