@@ -27,13 +27,15 @@ class ListaFilmes extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
-        leading: Icon(
-          Icons.adb_outlined,
-          color: Colors.white,
+        leading: Padding(
+          padding: EdgeInsets.only(left: 16.0),
+          child: Image(
+          image: AssetImage("Img/Logo.png"), 
+          )
         ),
         actions: const [
           Padding(
-            padding: EdgeInsets.only(right: 12.0),
+            padding: EdgeInsets.only(right: 16.0),
             child: Icon(
               Icons.search,
               color: Colors.white,
@@ -46,8 +48,7 @@ class ListaFilmes extends StatelessWidget {
               fontFamily: "Buran USSR" 
             ),
             ),
-        centerTitle: true,
-        backgroundColor: Color.fromARGB(164, 74, 7, 150),
+        backgroundColor: Color.fromRGBO(174, 0, 255, 150),
         toolbarHeight: 90,
       ),
       body: Padding(

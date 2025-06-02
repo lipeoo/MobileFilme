@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'Filme.dart';
 import "package:url_launcher/url_launcher.dart";
@@ -13,20 +15,23 @@ class DetalhesFilme extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
         title: Text(
           filme.nome,
           style: TextStyle(color: Colors.white),
         ),
         actions: const [
           Padding(
-            padding: EdgeInsets.only(right: 12.0),
+            padding: EdgeInsets.only(right: 16.0),
             child: Icon(
               Icons.search,
               color: Colors.white,
             ),
           )
         ],
-        backgroundColor: Color.fromARGB(255, 74, 7, 150),
+        backgroundColor: Color.fromRGBO(174, 0, 255, 150),
         toolbarHeight: 90,
       ),
       body: Center(
