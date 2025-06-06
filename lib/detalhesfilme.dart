@@ -31,7 +31,7 @@ class DetalhesFilme extends StatelessWidget {
             ),
           )
         ],
-        backgroundColor: Color.fromRGBO(174, 0, 255, 150),
+        backgroundColor: Color.fromRGBO(85, 0, 125, 1),
         toolbarHeight: 90,
       ),
       body: Center(
@@ -40,13 +40,13 @@ class DetalhesFilme extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.network(
-                filme.imagemPrincipal,
+              Image(
+                image: AssetImage("${filme.imagemPrincipal}"),
                 height: 1200,
                 width: 1200,
               ),
               SizedBox(height: 16),
-              Text('Sinopse', style: titulo()),
+              Text('Sinopse', style: titulo()), 
               Text(filme.sinopse, style: texto()),
               SizedBox(height: 12),
               Text('Direção/Produção', style: titulo()),
@@ -84,7 +84,7 @@ class DetalhesFilme extends StatelessWidget {
                   children: filme.galeria.map((url) {
                     return Padding(
                       padding: const EdgeInsets.only(right: 8.0),
-                      child: Image.network(url, width: 150),
+                      child: Image(image: AssetImage("$url"), width: 150),
                     );
                   }).toList(),
                 ),

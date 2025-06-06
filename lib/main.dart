@@ -48,11 +48,11 @@ class ListaFilmes extends StatelessWidget {
               fontFamily: "Buran USSR" 
             ),
             ),
-        backgroundColor: Color.fromRGBO(174, 0, 255, 150),
+        backgroundColor: Color.fromRGBO(85, 0, 125, 1),
         toolbarHeight: 90,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(20.0),
         child: GridView.builder(
           itemCount: filmes.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -72,15 +72,15 @@ class ListaFilmes extends StatelessWidget {
                 );
               },
               child: Card(
-                color: Color.fromARGB(255, 255, 255, 255),
+                color: Color.fromRGBO(216, 216, 216, 1),
                 elevation: 4,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Expanded(
                       flex: 3,
-                      child: Image.network(
-                        filme.imagemPrincipal,
+                      child: Image(
+                        image: AssetImage("${filme.imagemPrincipal}"),
                         fit: BoxFit.cover,
                         errorBuilder: (context, error, stackTrace) {
                           return Icon(Icons.broken_image, size: 40);
