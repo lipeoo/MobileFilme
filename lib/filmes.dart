@@ -141,7 +141,7 @@ final List<Filme> filmes = [
       'https://lumiere-a.akamaihd.net/v1/images/short_round_indiana_jones_c5b94338.jpeg?region=0,0,1400,700',
     ],
     avaliacao: 4.4,
-    imagemPrincipal: 'https://br.web.img2.acsta.net/medias/nmedia/18/91/98/02/20172661.jpg',
+    imagemPrincipal: 'Img/IJtemplo/capa.webp',
   ),
   Filme(
     nome: 'Indiana Jones: A Última Cruzada',
@@ -161,7 +161,7 @@ final List<Filme> filmes = [
       'https://m.media-amazon.com/images/M/MV5BMjAyMjUwNTg1NF5BMl5BanBnXkFtZTgwMTM3MzY3MTE@._V1_.jpg',
     ],
     avaliacao: 4.7,
-    imagemPrincipal: 'https://br.web.img2.acsta.net/medias/nmedia/18/91/98/15/20172684.jpg',
+    imagemPrincipal: 'Img/IJcruzada/capa.webp',
   ),
   Filme(
     nome: 'Indiana Jones: O Reino da Caveira de Cristal',
@@ -179,7 +179,7 @@ final List<Filme> filmes = [
       'https://static2.wikia.nocookie.net/__cb20100501170010/indianajones/images/e/e9/Crystal_skull_(4).jpg',
     ],
     avaliacao: 4.0,
-    imagemPrincipal: 'https://br.web.img3.acsta.net/medias/nmedia/18/87/05/76/19871584.jpg',
+    imagemPrincipal: 'Img/IJcaveira/capa.jpg',
   ),
   Filme(
     nome: 'Indiana Jones: A Relíquia do Destino',
@@ -197,6 +197,6 @@ final List<Filme> filmes = [
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7A_TAEcgiGNHZLt8GGi_kDvX_BIEkdqpARg&s',
     ],
     avaliacao: 4.2,
-    imagemPrincipal: 'https://media.fstatic.com/sq2h9NybCr_zRLU19ZtSngHHns8=/322x478/smart/filters:format(webp)/media/movies/covers/2023/06/indiana-jones-and-the-dial-of-destiny-poster.jpg',
+    imagemPrincipal: 'Img/IJdestino/capa.webp',
   ),
 ];

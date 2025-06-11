@@ -34,70 +34,94 @@ class DetalhesFilme extends StatelessWidget {
         backgroundColor: Color.fromRGBO(85, 0, 125, 1),
         toolbarHeight: 90,
       ),
-      body: Center(
+      body: Padding(
+        padding: EdgeInsets.all(20),
         child: SingleChildScrollView(
-          padding: EdgeInsets.all(16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image(
                 image: AssetImage("${filme.imagemPrincipal}"),
-                height: 1200,
-                width: 1200,
+                height: 500,
+                width: 500,
+                errorBuilder: (context, error, stackTrace) {
+                  return Icon(
+                    Icons.broken_image,
+                    size: 40,
+                    color: Color.fromARGB(169, 241, 239, 239),
+                  );
+                },
               ),
-              SizedBox(height: 16),
-              Text('Sinopse', style: titulo()), 
-              Text(filme.sinopse, style: texto()),
-              SizedBox(height: 12),
-              Text('Direção/Produção', style: titulo()),
-              Text(
-                filme.direcao,
-                style: texto(),
-              ),
-              SizedBox(height: 12),
-              Text('Empresa/Estúdio', style: titulo()),
-              Text(filme.empresa, style: texto()),
-              SizedBox(height: 12),
-              Text('Gênero', style: titulo()),
-              Text(filme.genero, style: texto()),
-              SizedBox(height: 12),
-              Text('Data de Lançamento', style: titulo()),
-              Text(filme.dataLancamento, style: texto()),
-              SizedBox(height: 12),
-              Text('Elenco', style: titulo()),
-              Text(
-                filme.elenco,
-                style: texto(),
-              ),
-              SizedBox(height: 12),
-              Text('Avaliação', style: titulo()),
-              Text(
-                '${filme.avaliacao}',
-                style: texto(),
-              ),
-              SizedBox(height: 12),
-              Text('Galeria de Imagens', style: titulo()),
-              SizedBox(height: 8),
+              SizedBox(height: 10),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: filme.galeria.map((url) {
                     return Padding(
                       padding: const EdgeInsets.only(right: 8.0),
-                      child: Image(image: AssetImage("$url"), width: 150),
+                      child: Image(
+                        image: AssetImage("$url"),
+                        width: 150,
+                        height: 120,
+                        errorBuilder: (context, error, stackTrace) {
+                          return Icon(
+                            Icons.broken_image,
+                            size: 40,
+                            color: Color.fromARGB(169, 241, 239, 239),
+                          );
+                        },
+                      ),
                     );
                   }).toList(),
                 ),
               ),
               SizedBox(height: 10),
-              ElevatedButton(
+              Container(
+                alignment: Alignment.center,
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                      alignment: Alignment.center,
+                      backgroundColor: WidgetStateProperty.all(
+                          Color.fromRGBO(85, 0, 125, 1)),
+                      foregroundColor: WidgetStateProperty.all(Colors.white),
+                      minimumSize: WidgetStateProperty.all(Size(50, 50))),
                   onPressed: () {
                     final Url = Uri.parse(filme.trailer);
                     launchUrl(Url, mode: LaunchMode.externalApplication);
                   },
                   child: Text(
                     "Trailer do filme",
-                  ))
+                  ),
+                ),
+              ),
+              SizedBox(height: 16),
+              Text('Sinopse', style: titulo(), textAlign: TextAlign.justify),
+              Text(filme.sinopse, style: texto(), textAlign: TextAlign.justify),
+              SizedBox(height: 12),
+              Text('Direção/Produção',
+                  style: titulo(), textAlign: TextAlign.justify),
+              Text(filme.direcao, style: texto(), textAlign: TextAlign.justify),
+              SizedBox(height: 12),
+              Text('Empresa/Estúdio',
+                  style: titulo(), textAlign: TextAlign.justify),
+              Text(filme.empresa, style: texto(), textAlign: TextAlign.justify),
+              SizedBox(height: 12),
+              Text('Gênero', style: titulo(), textAlign: TextAlign.justify),
+              Text(filme.genero, style: texto(), textAlign: TextAlign.justify),
+              SizedBox(height: 12),
+              Text('Data de Lançamento',
+                  style: titulo(), textAlign: TextAlign.justify),
+              Text(filme.dataLancamento,
+                  style: texto(), textAlign: TextAlign.justify),
+              SizedBox(height: 12),
+              Text('Elenco', style: titulo(), textAlign: TextAlign.justify),
+              Text(filme.elenco, style: texto(), textAlign: TextAlign.justify),
+              SizedBox(height: 12),
+              Text('Avaliação', style: titulo(), textAlign: TextAlign.justify),
+              Text(
+                '${filme.avaliacao}',
+                style: texto(),
+              ),
             ],
           ),
         ),
