@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/material.dart';
-import 'Filme.dart';
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, must_be_immutable 
+
+import "package:flutter/material.dart";
+import "Filme.dart";
 import "package:url_launcher/url_launcher.dart";
 
 class DetalhesFilme extends StatelessWidget {
@@ -42,7 +43,7 @@ class DetalhesFilme extends StatelessWidget {
             children: [
               Image(
                 alignment: Alignment.center,
-                image: AssetImage("${filme.imagemPrincipal}"),
+                image: AssetImage(filme.imagemPrincipal),
                 height: 500,
                 width: 500,
                 errorBuilder: (context, error, stackTrace) {
@@ -55,30 +56,28 @@ class DetalhesFilme extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                "${filme.nome}",
+                filme.nome,
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 30, color: Colors.white),
               ),
               SizedBox(height: 5),
-              Container(
-                child: Row(
-                  children: [
-                    Text(filme.dataLancamento,
-                        style: texto(), textAlign: TextAlign.justify),
-                    SizedBox(
-                      width: 125,
-                    ),
-                    Text(filme.genero,
-                        style: texto(), textAlign: TextAlign.justify),
-                    SizedBox(
-                      width: 125,
-                    ),
-                    Text(
-                      '⭐ ${filme.avaliacao}',
-                      style: texto(),
-                    ),
-                  ],
-                ),
+              Row(
+                children: [
+                  Text(filme.dataLancamento,
+                      style: texto(), textAlign: TextAlign.justify),
+                  SizedBox(
+                    width: 125,
+                  ),
+                  Text(filme.genero,
+                      style: texto(), textAlign: TextAlign.justify),
+                  SizedBox(
+                    width: 120,
+                  ),
+                  Text(
+                    "⭐ ${filme.avaliacao}",
+                    style: texto(),
+                  ),
+                ],
               ),
               SizedBox(height: 20),
               SingleChildScrollView(
@@ -89,7 +88,7 @@ class DetalhesFilme extends StatelessWidget {
                     return Padding(
                       padding: const EdgeInsets.only(right: 8.0),
                       child: Image(
-                        image: AssetImage("$url"),
+                        image: AssetImage(url),
                         width: 150,
                         height: 120,
                         errorBuilder: (context, error, stackTrace) {
@@ -116,26 +115,26 @@ class DetalhesFilme extends StatelessWidget {
                       foregroundColor: WidgetStateProperty.all(Colors.white),
                       minimumSize: WidgetStateProperty.all(Size(50, 50))),
                   onPressed: () {
-                    final Url = Uri.parse(filme.trailer);
-                    launchUrl(Url, mode: LaunchMode.externalApplication);
+                    final url = Uri.parse(filme.trailer);
+                    launchUrl(url, mode: LaunchMode.externalApplication);
                   },
                   child: Text(
                     "Trailer do filme",
                   ),
                 ),
               ),
-              Text('Sinopse', style: titulo(), textAlign: TextAlign.justify),
+              Text("Sinopse", style: titulo(), textAlign: TextAlign.justify),
               Text(filme.sinopse, style: texto(), textAlign: TextAlign.justify),
               SizedBox(height: 12),
-              Text('Direção/Produção',
+              Text("Direção/Produção",
                   style: titulo(), textAlign: TextAlign.justify),
               Text(filme.direcao, style: texto(), textAlign: TextAlign.justify),
               SizedBox(height: 12),
-              Text('Empresa/Estúdio',
+              Text("Empresa/Estúdio",
                   style: titulo(), textAlign: TextAlign.justify),
               Text(filme.empresa, style: texto(), textAlign: TextAlign.justify),
               SizedBox(height: 12),
-              Text('Elenco', style: titulo(), textAlign: TextAlign.justify),
+              Text("Elenco", style: titulo(), textAlign: TextAlign.justify),
               Text(filme.elenco, style: texto(), textAlign: TextAlign.justify),
               SizedBox(height: 12),
             ],

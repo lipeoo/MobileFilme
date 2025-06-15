@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, unnecessary_string_interpolations
 
-import 'package:flutter/material.dart';
-import 'package:index_cine/Filme.dart';
-import 'detalhesfilme.dart';
-import 'filmes.dart';
+import "package:flutter/material.dart";
+import "package:index_cine/Filme.dart";
+import "detalhesfilme.dart";
+import "filmes.dart";
 
 void main() {
   runApp(MainApp());
@@ -104,12 +104,12 @@ class ListaFilmes extends StatelessWidget {
                               overflow: TextOverflow.ellipsis,
                             ),
                             Text(
-                              '⭐ ${filme.avaliacao}',
+                              "⭐ ${filme.avaliacao}",
                               style: TextStyle(
                                   color: const Color.fromARGB(255, 0, 0, 0)),
                             ),
                             Text(
-                              'Lançamento: ${filme.dataLancamento}',
+                              "Lançamento: ${filme.dataLancamento}",
                               style: TextStyle(
                                   fontSize: 12,
                                   color: Color.fromARGB(255, 3, 3, 3)),
