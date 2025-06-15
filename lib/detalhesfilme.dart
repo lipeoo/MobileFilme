@@ -41,6 +41,7 @@ class DetalhesFilme extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image(
+                alignment: Alignment.center,
                 image: AssetImage("${filme.imagemPrincipal}"),
                 height: 500,
                 width: 500,
@@ -52,10 +53,38 @@ class DetalhesFilme extends StatelessWidget {
                   );
                 },
               ),
-              SizedBox(height: 10),
+              SizedBox(height: 20),
+              Text(
+                "${filme.nome}",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 30, color: Colors.white),
+              ),
+              SizedBox(height: 5),
+              Container(
+                child: Row(
+                  children: [
+                    Text(filme.dataLancamento,
+                        style: texto(), textAlign: TextAlign.justify),
+                    SizedBox(
+                      width: 125,
+                    ),
+                    Text(filme.genero,
+                        style: texto(), textAlign: TextAlign.justify),
+                    SizedBox(
+                      width: 125,
+                    ),
+                    Text(
+                      '⭐ ${filme.avaliacao}',
+                      style: texto(),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: 20),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: filme.galeria.map((url) {
                     return Padding(
                       padding: const EdgeInsets.only(right: 8.0),
@@ -82,7 +111,8 @@ class DetalhesFilme extends StatelessWidget {
                   style: ButtonStyle(
                       alignment: Alignment.center,
                       backgroundColor: WidgetStateProperty.all(
-                          Color.fromRGBO(85, 0, 125, 1)),
+                        Color.fromRGBO(85, 0, 125, 1),
+                      ),
                       foregroundColor: WidgetStateProperty.all(Colors.white),
                       minimumSize: WidgetStateProperty.all(Size(50, 50))),
                   onPressed: () {
@@ -94,7 +124,6 @@ class DetalhesFilme extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 16),
               Text('Sinopse', style: titulo(), textAlign: TextAlign.justify),
               Text(filme.sinopse, style: texto(), textAlign: TextAlign.justify),
               SizedBox(height: 12),
@@ -106,22 +135,9 @@ class DetalhesFilme extends StatelessWidget {
                   style: titulo(), textAlign: TextAlign.justify),
               Text(filme.empresa, style: texto(), textAlign: TextAlign.justify),
               SizedBox(height: 12),
-              Text('Gênero', style: titulo(), textAlign: TextAlign.justify),
-              Text(filme.genero, style: texto(), textAlign: TextAlign.justify),
-              SizedBox(height: 12),
-              Text('Data de Lançamento',
-                  style: titulo(), textAlign: TextAlign.justify),
-              Text(filme.dataLancamento,
-                  style: texto(), textAlign: TextAlign.justify),
-              SizedBox(height: 12),
               Text('Elenco', style: titulo(), textAlign: TextAlign.justify),
               Text(filme.elenco, style: texto(), textAlign: TextAlign.justify),
               SizedBox(height: 12),
-              Text('Avaliação', style: titulo(), textAlign: TextAlign.justify),
-              Text(
-                '${filme.avaliacao}',
-                style: texto(),
-              ),
             ],
           ),
         ),
