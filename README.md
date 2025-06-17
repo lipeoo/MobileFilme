@@ -1,4 +1,4 @@
-# Projeto Moblie
+# Index Cine
 >[!Important]
 >- Turma: 3°Mtec Desenvolvimento de Jogos Digitais.
 >- Escola: Etec Prof. Basilides de Godoy.
@@ -11,7 +11,6 @@
 >- Felipe Mussato Rodrigues
 >- Guilherme Henrique Lemes Souza
 
-# IndexCine
 
 ## Sobre
 
