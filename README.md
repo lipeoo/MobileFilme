@@ -17,9 +17,9 @@ Aplicativo mobile que apresenta o catalogo de filmes utilizados como referência
 
 # Sumário
 
-1. [Protótipo](https://github.com/lipeoo/MobileFilme/wiki/Protótipo)<br>
+1. [Aplicativo](https://github.com/lipeoo/MobileFilme/wiki/Aplicativo)<br>
 1.1 [Tela Inicial](https://github.com/lipeoo/MobileFilme/wiki/Aplicativo#tela-inicial)<br>
 1.2 [Tela dos filmes](https://github.com/lipeoo/MobileFilme/wiki/Aplicativo#tela-dos-filmes)<br>
 1.3 [Classe dos filmes](https://github.com/lipeoo/MobileFilme/wiki/Aplicativo#classe-dos-filmes)<br>
 1.4 [Declaração dos filmes](https://github.com/lipeoo/MobileFilme/wiki/Aplicativo#declaração-dos-filmes)<br>
-2. [Aplicativo](https://github.com/lipeoo/MobileFilme/wiki/Aplicativo)<br>
+2. [Protótipo](https://github.com/lipeoo/MobileFilme/wiki/Protótipo)<br>
