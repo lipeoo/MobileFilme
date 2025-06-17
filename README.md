@@ -13,9 +13,13 @@
 
 # Sobre
 
-Aplicativo mobile onde mostra os filmes referências para o jogo da amostra cultural 
+Aplicativo mobile que apresenta o catalogo de filmes utilizados como referências para o jogo da amostra cultural 
 
 # Sumário
 
 1. [Protótipo](https://github.com/lipeoo/MobileFilme/wiki/Protótipo)<br>
+1.1 [Tela Inicial](https://github.com/lipeoo/MobileFilme/wiki/Aplicativo#tela-inicial)<br>
+1.2 [Tela dos filmes](https://github.com/lipeoo/MobileFilme/wiki/Aplicativo#tela-dos-filmes)<br>
+1.3 [Classe dos filmes](https://github.com/lipeoo/MobileFilme/wiki/Aplicativo#classe-dos-filmes)<br>
+1.4 [Declaração dos filmes](https://github.com/lipeoo/MobileFilme/wiki/Aplicativo#declaração-dos-filmes)<br>
 2. [Aplicativo](https://github.com/lipeoo/MobileFilme/wiki/Aplicativo)<br>
