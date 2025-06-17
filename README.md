@@ -11,14 +11,15 @@
 >- Felipe Mussato Rodrigues
 >- Guilherme Henrique Lemes Souza
 
+# IndexCine
 
-# Sobre
+## Sobre
 
 Aplicativo mobile que apresenta o catalogo de filmes utilizados como referências para o jogo da amostra cultural 
 
 
 
-# Video
+## Video
 
 
 
@@ -26,7 +27,7 @@ https://github.com/user-attachments/assets/4e8cfcb7-54b1-4d0a-9a8c-71f6a4880524
 
 
 
-# Sumário
+## Sumário
 
 1. [Aplicativo](https://github.com/lipeoo/MobileFilme/wiki/Aplicativo)<br>
 1.1 [Tela Inicial](https://github.com/lipeoo/MobileFilme/wiki/Aplicativo#tela-inicial)<br>
