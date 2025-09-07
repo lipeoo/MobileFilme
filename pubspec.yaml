@@ -18,14 +18,15 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets: 
-    - Img/
-    - Img/cidade/
-    - Img/talentosas/
-    - Img/duastorre/
-    - Img/returnrei/
-    - Img/sociAnel/
-    - Img/IJarca/
-    - Img/IJcaveira/
-    - Img/IJcruzada/
-    - Img/IJdestino/
-    - Img/IJtemplo/
+    - Assets/
+    - Assets/Img/
+    - Assets/Img/cidade/
+    - Assets/Img/talentosas/
+    - Assets/Img/duastorre/
+    - Assets/Img/returnrei/
+    - Assets/Img/sociAnel/
+    - Assets/Img/IJarca/
+    - Assets/Img/IJcaveira/
+    - Assets/Img/IJcruzada/
+    - Assets/Img/IJdestino/
+    - Assets/Img/IJtemplo/

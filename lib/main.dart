@@ -1,40 +1,69 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, unnecessary_string_interpolations
 
+import "dart:convert";
+
 import "package:flutter/material.dart";
+import "package:flutter/services.dart";
 import "package:index_cine/Filme.dart";
 import "detalhesfilme.dart";
-import "filmes.dart";
 
 void main() {
   runApp(MainApp());
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
+
+  @override
+  void initState() {
+    super.initState();
+    readJson();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: ListaFilmes(filmes: filmes),
+      home: ListaFilmes(filmes: listaFilmes),
       debugShowCheckedModeBanner: false,
     );
   }
+
+  List<Filme> listaFilmes = List.empty();
+
+  Future<void> readJson() async {
+    final String response = await rootBundle.loadString("Assets/filmes.json");
+    Iterable data = await json.decode(response);
+    listaFilmes = List<Filme>.from(data.map((model) => Filme.fromJson(model)));
+    setState(() {
+      listaFilmes;
+    });
+  }
 }
 
-class ListaFilmes extends StatelessWidget {
+class ListaFilmes extends StatefulWidget {
   final List<Filme> filmes;
 
   ListaFilmes({required this.filmes});
 
+  @override
+  State<ListaFilmes> createState() => _ListaFilmesState();
+}
+
+class _ListaFilmesState extends State<ListaFilmes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
         leading: Padding(
-          padding: EdgeInsets.only(left: 16.0),
-          child: Image(
-          image: AssetImage("Img/Logo.png"), 
-          )
-        ),
+            padding: EdgeInsets.only(left: 16.0),
+            child: Image(
+              image: AssetImage("Assets/Img/Logo.png"),
+            )),
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 16.0),
@@ -44,19 +73,17 @@ class ListaFilmes extends StatelessWidget {
             ),
           )
         ],
-        title: const Text("IndexCine",
-            style: TextStyle(
-              color: Colors.white,
-              fontFamily: "Buran USSR" 
-            ),
-            ),
+        title: const Text(
+          "IndexCine",
+          style: TextStyle(color: Colors.white, fontFamily: "Buran USSR"),
+        ),
         backgroundColor: Color.fromRGBO(85, 0, 125, 1),
         toolbarHeight: 90,
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: GridView.builder(
-          itemCount: filmes.length,
+          itemCount: widget.filmes.length,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, // Dois por linha
             crossAxisSpacing: 2,
@@ -64,7 +91,7 @@ class ListaFilmes extends StatelessWidget {
             childAspectRatio: 0.75, // Largura/Altura, ajuste como quiser
           ),
           itemBuilder: (context, index) {
-            final filme = filmes[index];
+            final filme = widget.filmes[index];
             return GestureDetector(
               onTap: () {
                 Navigator.push(
