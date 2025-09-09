@@ -9,7 +9,7 @@
 >[!Important]
  > ` - Dupla:`
 >- Felipe Mussato Rodrigues
->- Guilherme Henrique Lemes Souza
+>- Kauan de Carlo Merida
 
 
 ## Sobre
