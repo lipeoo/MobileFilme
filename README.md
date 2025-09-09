@@ -3,7 +3,7 @@
 >- Turma: 3°Mtec Desenvolvimento de Jogos Digitais.
 >- Escola: Etec Prof. Basilides de Godoy.
 >- Sobre: Repositório para a documentação de um projeto mobile, um trabalho proposto pela professora Aline Firmino Brito da Etec Prof. Basilides de Godoy.
->- Datas: Entrega de Atividade (20/05/2025).
+>- Datas: Entrega de Atividade (09/09/2025).
 >- [Vídeo aplicativo](https://drive.google.com/file/d/1YdsodoHE8gkcUcqHiDVeUD-e9jJ8QNOI/view?usp=sharing)
 
 >[!Important]
